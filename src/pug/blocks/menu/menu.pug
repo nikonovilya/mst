@@ -1,0 +1,11 @@
+.menu#menu
+  .menu__content
+    .container
+      .menu__wrapper
+        nav.menu__nav
+          each item, i in DATA.nav1.list1
+            .menu__nav-item
+              a.menu__nav-link(
+                href="#"
+                target="_self"
+              ) !{DATA.nav1.list1[i].text1}

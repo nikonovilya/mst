@@ -1,0 +1,53 @@
+@use "Styles/variables/colors" as *;
+@use "Styles/variables/animation" as *;
+
+.footer {
+  padding: 43px 0 53px 0;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    &--01 {
+      align-items: center;
+    }
+
+    &--02 {
+      align-items: flex-end;
+    }
+  }
+
+  &__col {
+    display: flex;
+
+    &--02 {
+      justify-content: center;
+    }
+
+    &--03 {
+      justify-content: flex-end;
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    line-height: 1.5;
+    transition: color $transition;
+
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+
+  &__copyright {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,23 @@
+include ../includes/locales
+include ../includes/mixins
+
+doctype html
+html(lang=DATA.locale)
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1")
+    meta(property="og:type" content="website")
+    meta(property="og:site_name" content="MST")
+    meta(property="og:locale" content=DATA.meta.locale)
+    - ogImage = require(`Images/social/${DATA.locale}.png`);
+    meta(property="og:image" content=ogImage)
+    meta(property="og:image:width" content="960")
+    meta(property="og:image:height" content="540")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="canonical" href=DATA.domain)
+    include ../includes/favicons
+    block meta
+    block styles
+  body(class=DATA.locale translate="no")
+    block content
+    block scripts

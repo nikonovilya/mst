@@ -1,0 +1,17 @@
+@use "Styles/variables/colors" as *;
+
+.logo {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+
+  &__link {
+    width: 90px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

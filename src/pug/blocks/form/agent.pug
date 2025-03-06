@@ -1,0 +1,44 @@
+form.form.agent__form#agentForm(method="post")
+  input(name="form-name" type="hidden" value="agentForm")
+  .form__content
+    .form__row
+      h2.form__title.title2 !{DATA.agent.text1}
+    .form__row
+      .form__control
+        input.form__input(
+          type="text"
+          name="name"
+          pattern="^[A-Za-zА-Яа-яЁё]{2,}$"
+          maxlength="100"
+          placeholder=DATA.form.placeholder.text1
+          required)
+    .form__row
+      .form__control
+        input.form__input(
+          type="email"
+          name="email"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          maxlength="150"
+          placeholder=DATA.form.placeholder.text2
+          required)
+    .form__row
+      label.form__control.form__control--checkbox
+        input(
+          type="checkbox"
+          name="privacy"
+          required)
+        span !{DATA.form.placeholder.text3}
+    .form__row
+      button.btn.form__submit.btn--full(type="submit" disabled)
+        .button__wrapper
+          span !{DATA.buttons.text3}
+  .form__message.display-none
+    .form__message-success
+      h3.form__message-title.title2 !{DATA.form.success.text1}
+      p.form__message-text !{DATA.form.success.text2}
+    .form__message-error
+      h3.form__message-title.title2 !{DATA.form.error.text1}
+      p.form__message-text !{DATA.form.error.text2}
+    button.btn.form__message-btn(type="button")
+      .button__wrapper
+        span !{DATA.buttons.text4}

@@ -1,0 +1,100 @@
+{
+  "domain": "https://tt-mst.com/",
+  "locale": "en",
+  "meta": {
+    "title": {
+      "index": "MST | Test Task",
+      "fail": "Страница не найдена"
+    },
+    "description": {
+      "index": "Верстка страницы с инпровизированным текстом"
+    },
+    "keywords": {
+      "index": "промо видео, трейлеры к фильмам, создание музыки, саундтрек на заказ, ремиксы песен, видеомонтаж, звуковой дизайн, кинематографическая музыка, авторская музыка, музыка для трейлеров, продвижение фильмов, фоновая музыка, оригинальные композиции, музыка для рекламы, саундтрек для видео, аудиобрендинг, коммерческая музыка, профессиональный микс, музыкальное оформление, медиа продакшн"
+    },
+    "url": {
+      "index": "https://tt-mst.com/"
+    },
+    "locale": "en__EN"
+  },
+  "nav1": {
+    "list1": [
+      {
+        "text1": "Offer"
+      },
+      {
+        "text1": "Advantages"
+      },
+      {
+        "text1": "Be an agent"
+      }
+    ]
+  },
+  "buttons": {
+    "text1": "Be an agent",
+    "text2": "Submit form",
+    "text3": "Ok",
+    "text4": "Show path 2"
+  },
+  "header": {
+    "text1": "Хедер"
+  },
+  "offer": {
+    "text1": "Lorem ipsum dolor sit amet",
+    "text2": "sed do eiusmod tempor",
+    "list1": [
+      {
+        "text1": "do <span>$10 000</span> consectetur elit"
+      },
+      {
+        "text1": "<span>30%</span> sed do eiusmod tempor"
+      },
+      {
+        "text1": "do <span>17%</span> adipiscing elit sed do"
+      }
+    ]
+  },
+  "advantages": {
+    "list1": [
+      {
+        "text1": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor"
+      },
+      {
+        "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      },
+      {
+        "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      },
+      {
+        "text1": "Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      }
+    ]
+  },
+  "agent": {
+    "text1": "Consectetur sed do eiusmod"
+  },
+  "form": {
+    "placeholder": {
+      "text1": "Name",
+      "text2": "E-mail",
+      "text3": "I accept Privacy policy"
+    },
+    "success": {
+      "text1": "<span>Data sent,</span></br>we will contact you&nbsp;soon!",
+      "text2": "The application will be&nbsp;processed on&nbsp;weekdays from&nbsp;10:00 to&nbsp;19:00&nbsp;(GMT+3)"
+    },
+    "error": {
+      "text1": "<span>Oops...</span></br>Something went wrong!",
+      "text2": "Please check your connection, refresh the&nbsp;page, or&nbsp;go&nbsp;back"
+    }
+  },
+  "docs": {
+    "text1": "Privacy policy",
+    "text2": "Terms of Use"
+  },
+  "fail": {
+    "text1": "Page not found",
+    "text2": "The requested URL was&nbsp;not&nbsp;found on&nbsp;this server"
+  },
+  "copyright": "All rights reserved"
+}

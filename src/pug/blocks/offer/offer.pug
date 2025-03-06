@@ -1,0 +1,16 @@
+section.offer#offer
+  .container
+    .offer__wrapper
+      .offer__col
+        h1.offer__title !{DATA.offer.text1}
+        p.offer__text !{DATA.offer.text2}
+        picture.offer__picture
+          +pictureBlock("Images/offer/img@1x", "Images/offer/img@2x", 763, 1009, "Art")
+        .offer__list
+          each item, i in DATA.offer.list1
+            .offer__item
+              h2.offer__item-title !{DATA.offer.list1[i].text1}
+        a.btn.offer__btn(href="#agent")
+          .btn__wrapper
+            span !{DATA.buttons.text1}
+      .offer__col

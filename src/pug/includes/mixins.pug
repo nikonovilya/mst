@@ -1,0 +1,12 @@
+mixin pictureBlock(img1x, img2x, width, height, alt)
+  source(type="image/avif" srcset=`${img1x}.png?as=avif 1x, ${img2x}.png?as=avif 2x`)
+  source(type="image/png" srcset=`${img1x}.png 1x, ${img2x}.png 2x`)
+  img(
+    loading="lazy"
+    src=`${img1x}.png`
+    srcset=`${img1x}.png 1x, ${img2x}.png 2x`
+    width=width
+    height=height
+    alt=alt
+  )
+

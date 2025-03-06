@@ -1,0 +1,14 @@
+@use "sass:map";
+
+$breakpoint: (
+  '640': 640px,
+  '768': 768px,
+  '960': 960px,
+  '1180': 1180px
+);
+
+@mixin media($size) {
+  @media screen and (max-width: map.get($breakpoint, $size)) {
+    @content;
+  }
+}

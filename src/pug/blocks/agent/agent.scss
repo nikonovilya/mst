@@ -1,0 +1,18 @@
+@use "Styles/variables/colors" as *;
+
+.agent {
+  padding: 100px 0;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    background-color: $colorWhite;
+    border-radius: 20px;
+  }
+
+  &__col {
+    &--01 {
+      padding: 72px 0 72px 134px;
+    }
+  }
+}

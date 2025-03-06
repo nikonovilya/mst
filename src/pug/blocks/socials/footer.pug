@@ -1,0 +1,35 @@
+-
+  const SOCIALS_LIST = [
+    {
+      name: 'instagram',
+      url: 'https://google.com/'
+    },
+    {
+      name: 'tiktok',
+      url: 'https://google.com/'
+    },
+    {
+      name: 'linkedin',
+      url: 'https://google.com/'
+    },
+    {
+      name: 'facebook',
+      url: 'https://google.com/'
+    },
+    {
+      name: 'telegram',
+      url: 'https://google.com/'
+    },
+    {
+      name: 'youtube',
+      url: 'https://google.com/'
+    }
+  ];
+
+.socials.footer__socials
+  .socials__list
+    each item, i in SOCIALS_LIST
+      .socials__item
+        a.socials__link(href=SOCIALS_LIST[i].url target="_blank")
+          svg.img-full
+            use(href=`Images/sprite.svg#${SOCIALS_LIST[i].name}`)

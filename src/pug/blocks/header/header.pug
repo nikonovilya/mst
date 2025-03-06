@@ -1,0 +1,19 @@
+- const NAV1_URLS = ['/#offer', '#block2', '/#agent'];
+
+header#header.header
+  .container
+    .header__wrapper
+      .header__col.header__col--left
+        include ../logo/logo
+      .header__col.header__col--right
+        nav.header__nav
+          each item, i in DATA.nav1.list1
+            .header__nav-item
+              a.header__nav-link(
+                href=NAV1_URLS[i]
+                target="_self"
+              ) !{DATA.nav1.list1[i].text1}
+        button.menu-btn#menuBtn(type="button")
+          span.menu-btn__line
+          span.menu-btn__line
+          span.menu-btn__line

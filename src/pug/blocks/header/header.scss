@@ -1,0 +1,59 @@
+@use "Styles/variables/colors" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 26px 0;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: $colorDark;
+  }
+
+  &::after {
+    background: linear-gradient(to bottom, $colorWhite -80%, transparent 100%);
+  }
+
+  &.menu-opened {
+
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__nav-link {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    transition: .2s ease color;
+
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+}

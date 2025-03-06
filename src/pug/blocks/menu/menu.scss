@@ -1,0 +1,28 @@
+@use "Styles/variables/colors" as *;
+
+.menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px 0;
+  background-color: $colorDark;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

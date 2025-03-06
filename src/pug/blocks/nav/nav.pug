@@ -1,0 +1,10 @@
+.nav
+  .container
+    .nav__wrapper
+      nav.nav__list
+        each item, i in DATA.nav1.list1
+          .nav__item
+            a.nav__link(
+              href=NAV1_URLS[i]
+              target="_self"
+            ) !{DATA.nav1.list1[i].text1}

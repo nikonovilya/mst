@@ -1,0 +1,65 @@
+@use "Styles/variables/breakpoint" as *;
+@use "Styles/variables/colors" as *;
+
+.menu-btn {
+  position: relative;
+  display: none;
+  height: 20px;
+  width: 32px;
+  background-color: transparent;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+  @include media('960') {
+    display: block;
+  }
+
+  &__line {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    display: block;
+    background-color: $colorWhite;
+    border-radius: 10px;
+    transition: 0.4s;
+
+    &:nth-of-type(1) {
+      top: 0;
+      transform: rotate(0) translateY(0);
+      transition: top .05s ease .1s, transform .05s ease .05s;
+    }
+
+    &:nth-of-type(2) {
+      top: 50%;
+      opacity: 1;
+      transform: translateY(-50%);
+      transition: opacity .05s ease .1s;
+    }
+
+    &:nth-of-type(3) {
+      bottom: 0;
+      transform: rotate(0) translateY(0);
+      transition: bottom .05s ease .1s, transform .05s ease .05s;
+    }
+  }
+
+  &.active {
+    .menu-btn__line {
+      &:nth-of-type(1) {
+        top: 50%;
+        transform: rotate(45deg) translateY(-65%);
+        transition: top .05s ease .05s, transform .05s ease .1s;
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        bottom: 50%;
+        transform: rotate(-45deg) translateY(65%);
+        transition: bottom .05s ease .05s, transform .05s ease .1s;
+      }
+    }
+  }
+}

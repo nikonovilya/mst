@@ -1,0 +1,18 @@
+@function background-image-set($image-path) {
+  @return image-set(
+    url(#{$image-path}?as=avif) type("image/avif"),
+    url(#{$image-path}) type("image/png")
+  );
+}
+
+@mixin image-setX1($image-path) {
+  background-image: url($image-path);
+  background-image: background-image-set($image-path);
+}
+
+@mixin image-setX2($image-path) {
+  @media only screen and (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    background-image: url($image-path);
+    background-image: background-image-set($image-path);
+  }
+}

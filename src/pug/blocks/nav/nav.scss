@@ -1,0 +1,29 @@
+@use "Styles/variables/colors" as *;
+@use "Styles/variables/animation" as *;
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  border-top: 2px solid $colorBrown;
+  border-bottom: 2px solid $colorBrown;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__link {
+    font-style: italic;
+    text-transform: uppercase;
+    transition: color $transition;
+
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+}

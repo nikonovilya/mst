@@ -1,0 +1,18 @@
+extends ../layouts/main
+
+block meta
+  meta(name="robots" content="noindex,nofollow")
+  title=DATA.meta.title.fail
+  meta(property="og:title" content=DATA.meta.title.fail)
+  meta(property="og:url" content=`${DATA.domain}404`)
+  link(rel="canonical" href=DATA.domain + '404.html')
+  link(rel="preload" as="style" href=require("Styles/base.scss"))
+block styles
+  link(rel="stylesheet" href=require("Styles/base.scss") media="all")
+  link(rel="stylesheet" href="/assets/css/404.css" media="all")
+block content
+  - page = '404.html';
+  .page-wrapper.page-wrapper--fail
+    main
+      include ../blocks/fail/fail
+block scripts

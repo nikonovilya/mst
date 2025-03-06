@@ -1,0 +1,25 @@
+footer.footer
+  .container
+    .footer__wrapper
+      .footer__row.footer__row--01
+        .footer__col.footer__col--01
+          include ../logo/logo
+        .footer__col.footer__col--02
+          include ../socials/footer
+        .footer__col.footer__col--03
+          a.btn.footer__btn(href="/demo.html")
+            .btn__wrapper
+              span !{DATA.buttons.text4}
+      .footer__row.footer__row--02
+        .footer__col.footer__col--01
+          p.footer__copyright
+            span ©
+            span &nbsp;
+            span.current-year 2025
+            span ,
+            span &nbsp;
+            span !{DATA.copyright}
+        .footer__col.footer__col--02
+          a.footer__link(href="/link" target="_blank") !{DATA.docs.text1}
+        .footer__col.footer__col--03
+          a.footer__link(href="/link" target="_blank") !{DATA.docs.text2}

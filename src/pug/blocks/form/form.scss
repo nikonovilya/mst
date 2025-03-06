@@ -1,0 +1,86 @@
+@use "Styles/variables/colors" as *;
+
+.form {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  &__row--mb20 {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    color: $colorDark;
+  }
+
+  &__control--checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  input, textarea {
+    width: 100%;
+    margin: 0;
+    display: block;
+    min-height: 65px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px 40px;
+    color: $colorDark;
+    background-color: $colorWhite;
+    border: 1px solid $colorGrayLight;
+    border-radius: 4px;
+    outline: none;
+    transition: all .2s ease;
+
+    &::placeholder {
+      color: $colorGrayLight;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      color: $colorError;
+      border-color: $colorError;
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+    border-radius: 8px;
+    resize: none;
+  }
+
+  label span {
+    font-size: 16px;
+    color: $colorGray;
+  }
+
+  &__message {
+    &--success .form__message-success {
+      display: block;
+    }
+
+    &--success .form__message-error {
+      display: none;
+    }
+
+
+    &--error .form__message-error {
+      display: block;
+    }
+
+    &--error .form__message-success {
+      display: none;
+    }
+  }
+
+  &__message-title {
+    margin-bottom: 10px;
+  }
+
+  &__message-text {
+    margin-bottom: 20px;
+  }
+}

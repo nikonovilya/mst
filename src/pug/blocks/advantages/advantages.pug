@@ -1,0 +1,18 @@
+section.advantages#advantages
+  .container
+    .advantages__wrapper
+      .advantages__col
+        picture.advantages__picture
+          +pictureBlock(`Images/advantages/img-01@1x`, `Images/advantages/img-01@2x`, 846, 839, "Art 1")
+      .advantages__col.advantages__col--list
+        .advantages__list
+          each item, i in DATA.advantages.list1
+            .advantages__item
+              p.advantages__item-text
+                span !{DATA.advantages.list1[i].text1}
+        a.btn.advantages__btn.btn--full(href="#agent")
+          .btn__wrapper
+            span !{DATA.buttons.text1}
+      .advantages__col
+        picture.advantages__picture
+          +pictureBlock(`Images/advantages/img-02@1x`, `Images/advantages/img-02@2x`, 846, 839, "Art 2")

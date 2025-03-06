@@ -1,0 +1,44 @@
+{
+  "name": "mst",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack serve --mode=development",
+    "build": "webpack --mode=production --progress",
+    "build:dev": "webpack --mode=development --progress"
+  },
+  "browserslist": [
+    "last 4 versions",
+    "not dead",
+    "> 0.5%"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "esbuild-loader": "^4.3.0",
+    "html-bundler-webpack-plugin": "^4.18.0",
+    "http-server": "^14.1.1",
+    "image-minimizer-webpack-plugin": "^4.0.2",
+    "imagemin": "^9.0.0",
+    "imagemin-avif": "^0.1.6",
+    "mini-css-extract-plugin": "^2.9.0",
+    "postcss": "^8.4.40",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^9.6.0",
+    "prettier": "^3.5.2",
+    "pug-plugin": "^5.3.0",
+    "sass": "^1.77.8",
+    "sass-loader": "^16.0.5",
+    "sharp": "^0.32.6",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}
