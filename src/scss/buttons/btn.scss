@@ -22,7 +22,6 @@
 
   &:hover {
     color: $colorDark;
-    border-color: $colorPrimary;
     background-color: $colorPrimary;
   }
 
@@ -35,13 +34,12 @@
   }
 
   &--active {
-    color: $colorDark;
-    border-color: $colorPrimary;
-    background-color: $colorPrimary;
+    color: $colorWhite;
+    background-color: $colorDark2;
 
     &:hover {
-      color: $colorWhite;
-      background-color: $colorDark;
+      color: $colorDark;
+      background-color: $colorPrimary;
     }
   }
 
@@ -56,13 +54,8 @@
   }
 
   &:disabled {
-    color: $colorGray;
-    border-color: $colorGray;
-    background-color: $colorDark;
+    color: $colorWhite;
+    background-color: $colorGray;
     cursor: not-allowed;
-
-    &:hover {
-      color: $colorGray;
-    }
   }
 }

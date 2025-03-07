@@ -1,23 +1,94 @@
 @use "Styles/variables/colors" as *;
+@use "Styles/variables/animation" as *;
 
 .form {
   &__content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 13px;
   }
 
-  &__row--mb20 {
-    margin-bottom: 20px;
+  &__row {
+    display: flex;
+    flex-direction: column;
+
+    &--mb20 {
+      margin-bottom: 20px;
+    }
+
+    &--flex-start {
+      align-items: flex-start;
+    }
   }
 
   &__title {
-    color: $colorDark;
+    margin-bottom: 34px;
+    font-family: 'Prata', sans-serif;
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: 400;
+    color: $colorDarkBlue;
   }
 
   &__control--checkbox {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0;
+
+    span {
+      position: relative;
+      display: inline-block;
+      padding-left: 40px;
+      font-size: 16px;
+      color: $colorGray;
+      user-select: none;
+
+      &:hover::before {
+        border-color: $colorDark;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+        background-color: $colorWhite;
+        border: 2px solid $colorGrayBlue;
+        border-radius: 4px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        transition: all .2s ease;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 9px);
+        left: 3px;
+        z-index: 2;
+        display: none;
+        width: 18px;
+        height: 18px;
+        background: url(Images/agent/check.svg) center center/100% 100% no-repeat;
+        cursor: pointer;
+      }
+    }
+
+    input[type="checkbox"] {
+      &:checked + span::after {
+        display: block;
+      }
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   input, textarea {
@@ -31,10 +102,23 @@
     padding: 10px 40px;
     color: $colorDark;
     background-color: $colorWhite;
-    border: 1px solid $colorGrayLight;
+    border: 2px solid $colorGrayLight;
     border-radius: 4px;
     outline: none;
     transition: all .2s ease;
+
+    &:not(:placeholder-shown) {
+      color: $colorDark;
+      border-color: $colorDark;
+    }
+
+    &:hover {
+      border-color: $colorDark;
+    }
+
+    &:focus, &:active {
+      border-color: $colorDark;
+    }
 
     &::placeholder {
       color: $colorGrayLight;
@@ -52,12 +136,13 @@
     resize: none;
   }
 
-  label span {
-    font-size: 16px;
-    color: $colorGray;
-  }
-
   &__message {
+    min-height: 484px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $colorDarkBlue;
+
     &--success .form__message-success {
       display: block;
     }
@@ -77,10 +162,15 @@
   }
 
   &__message-title {
+    font-family: 'Prata', sans-serif;
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: 400;
+    color: $colorDarkBlue;
     margin-bottom: 10px;
   }
 
   &__message-text {
-    margin-bottom: 20px;
+    margin-bottom: 45px;
   }
 }

@@ -23,3 +23,8 @@ $transition: .2s ease;
     transform: scale(1.2)
   }
 }
+
+@keyframes rotate {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg);}
+}

@@ -17,10 +17,15 @@ function scrollToBlock() {
   document.querySelectorAll("a[href*='#']").forEach((anchor) => {
     anchor.addEventListener('click', function (event) {
       event.preventDefault();
-      // const targetId = this.getAttribute('href').substring(1);
-      const targetId = this.getAttribute('href');
+
+      const href = this.getAttribute('href');
+      const targetId = href.includes('/#') ? href.split('/#')[1] : href.substring(1);
       const targetElement = document.getElementById(targetId);
-      const headerHeight = SELECTORS.header?.offsetHeight || 0;
+      const headerHeight = SELECTORS?.header?.offsetHeight || 0;
+
+      console.log('Clicked link:', href);
+      console.log('Extracted target ID:', targetId);
+      console.log('Found target element:', targetElement);
 
       if (targetElement) {
         const targetPosition =
@@ -28,14 +33,22 @@ function scrollToBlock() {
           window.scrollY -
           headerHeight;
 
+        console.log('Scrolling to:', targetPosition);
+
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth',
         });
+
+        // Обновляем URL без перезагрузки
+        history.pushState(null, null, `#${targetId}`);
+      } else {
+        console.warn(`⚠️ Блок с id="${targetId}" не найден! Проверь HTML.`);
       }
     });
   });
 }
+
 
 function scrollToLocation() {
   const hash = window.location.hash.substring(1);

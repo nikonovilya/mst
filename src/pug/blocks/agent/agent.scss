@@ -1,18 +1,34 @@
 @use "Styles/variables/colors" as *;
+@use "Styles/variables/function" as *;
 
 .agent {
   padding: 100px 0;
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 1fr 600px;
+    grid-template-columns: 1fr 635px;
+    gap: 50px;
     background-color: $colorWhite;
-    border-radius: 20px;
+    border-radius: 30px;
   }
 
   &__col {
     &--01 {
       padding: 72px 0 72px 134px;
     }
+
+    &--02 {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+    background: center center/100% 100% no-repeat;
+    @include image-setX1('Images/agent/img@1x.png');
+    @include image-setX2('Images/agent/img@2x.png');
   }
 }

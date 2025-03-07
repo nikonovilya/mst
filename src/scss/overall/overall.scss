@@ -28,12 +28,13 @@
   &::before {
     content: '';
     position: absolute;
+    z-index: 3;
     top: calc(50% - 15px);
     left: calc(50% - 15px);
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 2px solid $colorGray;
+    border: 2px solid $colorWhite;
     border-top-color: transparent;
     animation: rotate 1s infinite linear;
   }

@@ -21,17 +21,17 @@ form.form.agent__form#agentForm(method="post")
           maxlength="150"
           placeholder=DATA.form.placeholder.text2
           required)
-    .form__row
+    .form__row.form__row--flex-start
       label.form__control.form__control--checkbox
-        input(
+        input.form__checkbox.visually-hidden(
           type="checkbox"
           name="privacy"
           required)
         span !{DATA.form.placeholder.text3}
     .form__row
-      button.btn.form__submit.btn--full(type="submit" disabled)
+      button.btn.form__submit.btn--full.btn--active(type="submit" disabled)
         .button__wrapper
-          span !{DATA.buttons.text3}
+          span !{DATA.buttons.text2}
   .form__message.display-none
     .form__message-success
       h3.form__message-title.title2 !{DATA.form.success.text1}
@@ -39,6 +39,6 @@ form.form.agent__form#agentForm(method="post")
     .form__message-error
       h3.form__message-title.title2 !{DATA.form.error.text1}
       p.form__message-text !{DATA.form.error.text2}
-    button.btn.form__message-btn(type="button")
+    button.btn.form__message-btn.btn--full.btn--active(type="button")
       .button__wrapper
-        span !{DATA.buttons.text4}
+        span !{DATA.buttons.text3}

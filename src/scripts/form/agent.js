@@ -5,7 +5,7 @@ const formContent = SELECTORS.agentForm.querySelector('.form__content');
 const submitButton = SELECTORS.agentForm.querySelector('.form__submit');
 const submitBlock = SELECTORS.agentForm.querySelector('.form__message');
 const messageButton = SELECTORS.agentForm.querySelector('.form__message-btn');
-const formInputs = SELECTORS.agentForm.querySelectorAll('.form__input');
+const formInputs = SELECTORS.agentForm.querySelectorAll('.form__input, .form__checkbox');
 const API_URL = 'https://script.google.com/macros/s/AKfycbyFxCrdIDALeZYWBnpicVw8fWC28ay7p9HGoM_KwnoVkmqqJeMKxUQfMGMuC0_FzVLSow/exec';
 
 function disabledForm() {
